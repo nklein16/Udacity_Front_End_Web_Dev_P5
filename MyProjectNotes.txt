@@ -1,0 +1,92 @@
+## Personal Project Notes:
+
+# service worker can be found by doing console.log(navigator) in Chrome
+# python -m SimpleHTTPServer 8000
+
+Changes to main.js prior to first commit:
+
+Added title to the image for each restaurant for accessibility purposes. Title also shows up when hovering over restaurant with mouse.
+
+Changes to style.css prior to first git commit:
+
+Under Restaurant Filtering:
+
+Under .filter-options:
+- changed height to min-height (did not change value; stayed at 50px)
+- added display:flex and flex-wrap: wrap
+
+Under #restaurants-list:
+- added display: flex and flex-wrap: wrap
+- added justify-content: center
+
+Under #restaurants-list li:
+- removed min-height: 380px
+- added height: 80%
+- added max-height: 300px
+- changed width from 270px to 80%
+
+Under #restaurants-list .restaurant-img:
+- changed min-height from 248px to 100px
+- added margin-top: 10px
+
+Under #restaurants-list li h1:
+- changed font-size from 14pt to 12pt
+- changed line-height from 1.3 to 1.0
+
+Under #restaurants-list p:
+- changed font-size from 11pt to 9pt
+- added line-height: 1.1
+
+Created the following media query:
+
+@media only screen and (min-width: 375px) {
+
+  /* Playing with min-height and with width... */
+  #restaurants-list li {
+    background-color: #fff;
+    /* background-color: red; */
+    border: 2px solid #ccc;
+    font-family: Arial,sans-serif;
+    margin: 15px;
+    min-height: 380px;
+    height: 250px;
+    padding: 0 30px 25px;
+    text-align: left;
+    width: 270px;
+  }
+
+  #restaurants-list .restaurant-img {
+    background-color: #ccc;
+    display: block;
+    margin: 0;
+    max-width: 100%;
+    min-height: 248px;
+    min-width: 100%;
+  }
+  #restaurants-list li h1 {
+    color: #f18200;
+    font-family: Arial,sans-serif;
+    font-size: 14pt;
+    font-weight: 200;
+    letter-spacing: 0;
+    line-height: 1.3;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+  }
+  #restaurants-list p {
+    margin: 0;
+    font-size: 11pt;
+  }
+  #restaurants-list li a {
+    background-color: orange;
+    border-bottom: 3px solid #eee;
+    color: #fff;
+    display: inline-block;
+    font-size: 10pt;
+    margin: 15px 0 0;
+    padding: 8px 30px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
