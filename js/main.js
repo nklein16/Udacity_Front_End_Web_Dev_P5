@@ -166,6 +166,8 @@ createRestaurantHTML = (restaurant) => {
   // Nathaniel: added title to the image for each restaurant for accessibility purposes.
   // Title also shows up when hovering over restaurant with mouse.
   image.title = restaurant.name;
+  // Adding alt tag for accessibility purposes
+  image.alt = image.title;
   li.append(image);
   /* End ADDED CODE */
 
@@ -183,6 +185,7 @@ createRestaurantHTML = (restaurant) => {
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
+  more.alt = more.innerHTML;
   more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
@@ -215,3 +218,15 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+// Reference the serveice worker file
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sworker.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}

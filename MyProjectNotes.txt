@@ -1,7 +1,17 @@
 ## Personal Project Notes:
 
-# service worker can be found by doing console.log(navigator) in Chrome
-# python -m SimpleHTTPServer 8000
+## Start the server with either:
+
+python -m SimpleHTTPServer 8000 (python 2)
+or
+python -m http.server 8000 (python 3)
+
+## How to inspect Service Workers
+
+Service workers can be found by doing console.log(navigator) in Chrome
+One can also inspect them with: chrome://inspect/#service-workers
+
+## Log of Changes
 
 Changes to main.js prior to first commit:
 
@@ -34,7 +44,7 @@ Under #restaurants-list li h1:
 - changed line-height from 1.3 to 1.0
 
 Under #restaurants-list p:
-- changed font-size from 11pt to 9pt
+- changed font-size from 11pt to 9pt, then changed it back to 12pt
 - added line-height: 1.1
 
 Created the following media query:
@@ -90,3 +100,4 @@ Created the following media query:
     text-transform: uppercase;
   }
 }
+
